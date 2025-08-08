@@ -1,0 +1,108 @@
+.weather-anim {
+    position: fixed;
+    z-index: 0;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+  
+  .sunny-anim .sun {
+    position: absolute;
+    left: 70vw; top: 10vh;
+    width: 120px; height: 120px;
+    background: radial-gradient(#FFD700 60%, #FFFBAC 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 80px 40px #ffed71;
+    animation: spinSun 20s linear infinite;
+  }
+  
+  @keyframes spinSun {
+    to { transform: rotate(360deg);}
+  }
+  
+  .rainy-anim .cloud,
+  .snowy-anim .cloud,
+  .cloudy-anim .cloud {
+    position: absolute;
+    top: 18vh;
+    left: 60vw;
+    width: 180px;
+    height: 60px;
+    background: #fff;
+    border-radius: 60px;
+    box-shadow: 40px 0 #e0e0e0, -40px 0 #e0e0e0;
+  }
+  
+  .cloudy-anim .cloud-1 { top: 16vh; left: 55vw; opacity: 0.7;}
+  .cloudy-anim .cloud-2 { top: 22vh; left: 67vw; opacity: 0.5;}
+  
+  .rainy-anim .rain .drop {
+    position: absolute;
+    width: 4px; height: 20px;
+    background: #4584b6;
+    border-radius: 2px;
+    left: calc(20px * var(--i, 0));
+    top: 65px;
+    animation: rainFall 1s linear infinite;
+    opacity: 0.6;
+  }
+  .rainy-anim .rain .drop:nth-child(n) { --i: 1;}
+  .rainy-anim .rain .drop:nth-child(1)  { left:  5px; animation-delay: 0s;}
+  .rainy-anim .rain .drop:nth-child(2)  { left: 30px; animation-delay: 0.2s;}
+  .rainy-anim .rain .drop:nth-child(3)  { left: 60px; animation-delay: 0.5s;}
+  .rainy-anim .rain .drop:nth-child(4)  { left: 80px; animation-delay: 0.6s;}
+  .rainy-anim .rain .drop:nth-child(5)  { left:110px; animation-delay: 0.8s;}
+  .rainy-anim .rain .drop:nth-child(6)  { left:150px; animation-delay: 1s;}
+  /* Add more if needed */
+  
+  @keyframes rainFall {
+    to { top: 120px; opacity: 0.1;}
+  }
+  
+  .snowy-anim .snow .snowflake {
+    position: absolute;
+    width: 9px; height: 9px;
+    left: calc(10px * var(--i, 0));
+    top: 70px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+    animation: snowFall 2.5s linear infinite;
+  }
+  .snowy-anim .snow .snowflake:nth-child(1)  { left:   3px; animation-delay: 0s; }
+  .snowy-anim .snow .snowflake:nth-child(2)  { left:  35px; animation-delay: 0.4s;}
+  .snowy-anim .snow .snowflake:nth-child(3)  { left:  60px; animation-delay: 1s; }
+  .snowy-anim .snow .snowflake:nth-child(4)  { left: 100px; animation-delay: 1.5s;}
+  .snowy-anim .snow .snowflake:nth-child(5)  { left: 145px; animation-delay: 2s; }
+  /* ...more for denser snow */
+  
+  @keyframes snowFall {
+    0%   { top: 70px; }
+    80%  { opacity: .7;}
+    100% { top: 130px; opacity: 0.2;}
+  }
+  
+  .windy-anim .wind .wind-line {
+    position: absolute;
+    left: 25vw; top: 50vh;
+    width: 120px; height: 10px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #8ecaff, #b4e8ff 50%, transparent 100%);
+    opacity: 0.4;
+    animation: windMove 2s ease-in-out infinite;
+  }
+  
+  .windy-anim .wind .wind-line:nth-child(2) {
+    top: 55vh;
+    width: 90px;
+    animation-delay: 1.2s;
+  }
+  
+  @keyframes windMove {
+    0% { left: 24vw; opacity: 0.6;}
+    100% { left: 80vw; opacity: 0;}
+  }
+  
+  .weather-anim { pointer-events: none; }
+  

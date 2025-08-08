@@ -28,6 +28,48 @@
   color: #61dafb;
 }
 
+.app-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  transition: background 1s;
+}
+
+/* Default */
+.app-bg.default {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+/* Sunny */
+.app-bg.sunny {
+  background: linear-gradient(120deg, #fceabb 0%, #f8b500 100%);
+}
+
+/* Rainy */
+.app-bg.rainy {
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  /* Optional: raindrop overlay or subtle animated bg */
+}
+
+/* Cloudy */
+.app-bg.cloudy {
+  background: linear-gradient(120deg, #d7dde8 0%, #757f9a 100%);
+}
+
+/* Snowy */
+.app-bg.snowy {
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+}
+
+/* Windy */
+.app-bg.windy {
+  background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
