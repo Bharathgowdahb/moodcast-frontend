@@ -47,7 +47,39 @@ function App() {
       <h1>MoodCast 🌤️</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Your name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <input type="text" placeholder="City name" value={city} onChange={(e) => setCity(e.target.value)} required />
+        <select value={city} onChange={(e) => setCity(e.target.value)} required>
+        <option value="">Select a City</option>
+        <option value="Bagalkot">Bagalkot</option>
+        <option value="Bangalore Rural">Bangalore Rural</option>
+        <option value="Bangalore Urban">Bangalore Urban</option>
+        <option value="Belagavi">Belagavi</option>
+        <option value="Ballari">Ballari</option>
+        <option value="Bidar">Bidar</option>
+        <option value="Chamarajanagar">Chamarajanagar</option>
+        <option value="Chikballapur">Chikballapur</option>
+        <option value="Chikkamagaluru">Chikkamagaluru</option>
+        <option value="Chitradurga">Chitradurga</option>
+        <option value="Dakshina Kannada">Dakshina Kannada</option>
+        <option value="Davanagere">Davanagere</option>
+        <option value="Dharwad">Dharwad</option>
+        <option value="Gadag">Gadag</option>
+        <option value="Hassan">Hassan</option>
+        <option value="Haveri">Haveri</option>
+        <option value="Kalaburagi">Kalaburagi</option>
+        <option value="Kodagu">Kodagu</option>
+        <option value="Kolar">Kolar</option>
+        <option value="Koppal">Koppal</option>
+        <option value="Mandya">Mandya</option>
+        <option value="Mysuru">Mysuru</option>
+        <option value="Raichur">Raichur</option>
+        <option value="Ramanagara">Ramanagara</option>
+        <option value="Shivamogga">Shivamogga</option>
+        <option value="Tumakuru">Tumakuru</option>
+        <option value="Udupi">Udupi</option>
+        <option value="Uttara Kannada">Uttara Kannada</option>
+        <option value="Vijayapura">Vijayapura</option>
+        <option value="Yadgir">Yadgir</option>
+      </select>
         <button type="submit">Get MoodCast</button>
       </form>
 
